@@ -6,9 +6,11 @@ from setuptools import setup
 with open("README.md") as readme_file:
     readme_data = readme_file.read()
 
+signoff_version = '0.2.1'
+
 setup(
     name="arch-signoff",
-    use_scm_version=True,
+    version=signoff_version,
     description="Sign off Arch Linux test packages",
     long_description=readme_data,
     author="Håvard Pettersson",
@@ -25,7 +27,6 @@ setup(
         "Operating System :: POSIX :: Linux",
     ],
 
-    setup_requires=["setuptools_scm"],
     install_requires=[
         "click",
         "python-dateutil",
